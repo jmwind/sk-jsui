@@ -1,6 +1,11 @@
-# preact-test
+# sk-jsui
 
-## CLI Commands
+* [] create a gridbox and panels each listening to their own metric
+* [] put header at bottom and mimic i70 control menus
+* [] add ui for loading polars
+* [] add a directional wind graphical widget
+* [] format numbers with smaller decimals
+* [] add histogram widget (store data in client sdk)
 
 ``` bash
 # install dependencies

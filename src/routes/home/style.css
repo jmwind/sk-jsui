@@ -13,7 +13,6 @@
 	background-color: black;
 	height: 100%;
 	border-radius: 10px;
-
 	grid-row-start: 1;
 	grid-row-end: 3;
 }
@@ -26,8 +25,9 @@
 
 .h2 {
 	text-align: center;
-	font-size: 200px;
+	font-size: 225px;
 	font-weight: 900;
+	height: 100%;
 	margin: -50px;
 }
 

@@ -19,6 +19,9 @@ const Home = (props) => {
 	let aws_val = SkConversions.fromMetric(aws);
 	let awa_val = SkConversions.fromMetric(awa);
 	let sog_val = SkConversions.fromMetric(sog);
+	let aws_val_dec = (aws_val % 1).toFixed(1);
+	let awa_val_dec = (awa_val % 1).toFixed(1);
+	let sog_val_dec = (sog_val % 1).toFixed(1);
 
 	return (
 		<div class={style.home}>
