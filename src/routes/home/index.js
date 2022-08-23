@@ -10,17 +10,14 @@ const Home = (props) => {
 	return (
 		<div class={style.home}>
 			<div class={style.left}>
-				<Metric metrics={metrics} metric_name='navigation.polarSpeedRatio' large={true} />
+				<Metric metrics={metrics} metric_name='navigation.speedOverGround' large={true} />
 			</div>
 			<div class={style.right}>
 				<Metric metrics={metrics} metric_name='environment.wind.angleApparent' large={false} />
 			</div>
 			<div class={style.right}>
 				<Metric metrics={metrics} metric_name='environment.wind.speedApparent' large={false} />
-			</div>
-			<div class={style.right}>
-				<Metric metrics={metrics} metric_name='navigation.speedOverGround' large={false} />
-			</div>
+			</div>		
 		</div >
 	);
 }
