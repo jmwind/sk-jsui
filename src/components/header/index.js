@@ -6,7 +6,7 @@ const Header = () => (
 	<header class={style.header}>
 		<h1>SignalK Widgets</h1>
 		<nav>
-			<Link activeClassName={style.active} href="/">⚙️</Link>
+			<Link activeClassName={style.active} href="/profile">⚙️</Link>
 		</nav>
 	</header>
 );

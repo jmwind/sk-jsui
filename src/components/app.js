@@ -7,6 +7,7 @@ import { SkData, SkConversions } from 'sk-jsclient/sk-data';
 
 // Code-splitting is automated for `routes` directory
 import Home from '../routes/home';
+import Profile from '../routes/profile';
 import { useEffect, useState } from 'preact/hooks';
 
 const App = () => {
@@ -19,7 +20,6 @@ const App = () => {
 	useEffect(() => {
 		let client = new SkClient(createWebsocket);
 		client.setState(metrics);
-		client.on('delta', () => { });
 		client.connect();
 		return () => {
 			client.off('delta');
@@ -32,6 +32,7 @@ const App = () => {
 			<Header />
 			<Router>
 				<Home path="/" msg="Speed Ratio" metrics={metrics} />
+				<Profile path="/profile" />
 			</Router>
 		</div>
 	);

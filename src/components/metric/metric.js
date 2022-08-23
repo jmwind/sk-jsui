@@ -1,4 +1,4 @@
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useState, useRef } from "preact/hooks";
 import style from './style.css';
 import { SkConversions } from 'sk-jsclient/sk-data';
 
