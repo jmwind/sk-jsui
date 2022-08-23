@@ -16,7 +16,7 @@ const Home = (props) => {
 				<Metric metrics={metrics} metric_name='environment.wind.angleApparent' large={false} />
 			</div>
 			<div class={style.right}>
-				<Metric metrics={metrics} metric_name='navigation.speedOverGround' large={false} />
+				<Metric metrics={metrics} metric_name='navigation.polarSpeedRatio' large={false} />
 			</div>
 		</div >
 	);

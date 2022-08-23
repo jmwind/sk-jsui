@@ -12,16 +12,6 @@ import { useEffect, useState } from 'preact/hooks';
 const App = () => {
 	const [metrics, setMetrics] = useState(SkData.newMetrics());
 
-	const accept = () => {
-		let aws = metrics['environment.wind.speedApparent'];
-		let awa = metrics['environment.wind.angleApparent'];
-		let sog = metrics['navigation.speedOverGround'];
-		let aws_val = SkConversions.fromMetric(aws);
-		let awa_val = SkConversions.fromMetric(awa);
-		let sog_val = SkConversions.fromMetric(sog);
-		console.log(`SOG: ${sog_val}${sog.nameUnit} AWS: ${aws_val}${aws.nameUnit} AWA: ${awa_val}${awa.nameUnit}`);
-	}
-
 	const createWebsocket = (url) => {
 		return new WebSocket(url);
 	}
@@ -29,7 +19,7 @@ const App = () => {
 	useEffect(() => {
 		let client = new SkClient(createWebsocket);
 		client.setState(metrics);
-		client.on('delta', accept);
+		client.on('delta', () => { });
 		client.connect();
 		return () => {
 			client.off('delta');
