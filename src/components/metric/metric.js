@@ -14,9 +14,6 @@ const Metric = (props) => {
 
     let m = metrics[props.metric_name];
     let m_val = SkConversions.fromMetric(m).toFixed(m.rounding);
-    if (props.formatter) {
-        m_val = props.formatter(m_val);
-    }
 
     return (
         <div class={style.left}>
