@@ -4,7 +4,7 @@ import { Router } from 'preact-router';
 import Header from './header';
 import './index.css';
 import SkClient from 'sk-jsclient/sk-client';
-import { SkData, SkConversions } from 'sk-jsclient/sk-data';
+import { SkData, SkPolars, CATALINA_36_POLARS } from 'sk-jsclient/sk-data';
 
 // Code-splitting is automated for `routes` directory
 import Home from '../routes/home';
@@ -22,6 +22,7 @@ const App = () => {
 	useEffect(() => {
 		let client = new SkClient(createWebsocket);
 		client.setState(metrics);
+		client.setPolars(SkPolars.readFromFileContents(CATALINA_36_POLARS));
 		client.connect();
 		return () => {
 			client.off('delta');
