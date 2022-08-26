@@ -52,15 +52,22 @@ const WindGauge = (props) => {
 
     var portData = arcGenerator({
         startAngle: toRadians(300),
-        endAngle: toRadians(340),
+        endAngle: toRadians(345),
         innerRadius: 37,
         outerRadius: 40
     });
 
     var stbData = arcGenerator({
-        startAngle: toRadians(20),
+        startAngle: toRadians(15),
         endAngle: toRadians(60),
         innerRadius: 37,
+        outerRadius: 40
+    });
+
+    var outsideRing = arcGenerator({
+        startAngle: toRadians(15),
+        endAngle: toRadians(345),
+        innerRadius: 41,
         outerRadius: 40
     });
 
@@ -99,8 +106,6 @@ const WindGauge = (props) => {
         return text
     }
 
-    // update metrics every 1s
-    // update metrics every 1s
     useEffect(() => {
         let timer = setInterval(() => setTime(Date.now()), 1000);
         return () => clearInterval(timer);
@@ -111,7 +116,7 @@ const WindGauge = (props) => {
             <svg
                 width="18em"
                 height="18em"
-                viewBox={[-40, -40, 80, 80].join(" ")}
+                viewBox={[-45, -45, 90, 90].join(" ")}
             >
                 <defs>
                     <marker id="arrowhead" markerWidth="10" markerHeight="7"
@@ -122,6 +127,7 @@ const WindGauge = (props) => {
                 <path d={pathData} fill="lightgrey" />
                 <path d={portData} fill="red" />
                 <path d={stbData} fill="green" />
+                <path d={outsideRing} fill={textColor} />
                 {ticks(15, 30)}
                 {tickText(30)}
                 <text
