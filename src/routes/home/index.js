@@ -3,6 +3,7 @@ import style from './style.css'
 import Metric from '../../components/metric/metric'
 import { SkData } from 'sk-jsclient/sk-data'
 import WindGauge from "../../components/windgauge/windgauge"
+import PolarGauge from "../../components/polargauge/polargauge"
 
 const Home = (props) => {
 	const [metrics, setMetrics] = useState(props.metrics);
@@ -10,7 +11,7 @@ const Home = (props) => {
 	return (
 		<div class={style.home}>
 			<div class={style.left}>
-				<Metric metrics={metrics} metric_name={SkData.POLAR_RATIO} large={true} />
+				<PolarGauge metrics={metrics} theme={props.theme} />
 			</div>
 			<div class={style.right}>
 				<WindGauge metrics={metrics} theme={props.theme} />

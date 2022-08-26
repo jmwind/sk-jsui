@@ -1,0 +1,15 @@
+.container {
+    background-color: var(--background);
+    color: var(--text-primary);
+    height: 100%;
+    border-radius: 10px;
+    border-color: var(--text-primary);
+    border-width: 2px;
+    padding: 10px;
+    border: solid;
+    flex: 1 1 auto;
+}
+
+.h1 {
+    color: var(--text-primary);
+}
