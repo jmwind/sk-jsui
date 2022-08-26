@@ -38,7 +38,7 @@ const App = () => {
 		<div id="app" data-theme={theme}>
 			<Header theme={theme} themeCallback={themeCallback} />
 			<Router>
-				<Home path="/" msg="Speed Ratio" metrics={metrics} />
+				<Home path="/" msg="Speed Ratio" metrics={metrics} theme={theme} />
 				<Profile path="/profile" />
 			</Router>
 		</div>

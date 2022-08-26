@@ -1,13 +1,3 @@
-.home {
-    padding: 60px 15px;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    column-gap: 0.5em;
-    row-gap: 0.5em;
-}
-
 .left {
     background-color: var(--background);
     color: var(--text-primary);

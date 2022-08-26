@@ -1,7 +1,5 @@
-import { h } from 'preact';
 import { Link } from 'preact-router/match';
 import style from './style.css';
-import ToggleButton from '../toggle/toggle'
 
 const Header = (props) => {
 	return (
