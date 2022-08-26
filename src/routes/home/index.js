@@ -1,7 +1,8 @@
-import { useState } from "preact/hooks";
-import style from './style.css';
-import Metric from '../../components/metric/metric';
-import { SkData } from "sk-jsclient/sk-data";
+import { useState } from "preact/hooks"
+import style from './style.css'
+import Metric from '../../components/metric/metric'
+import { SkData } from 'sk-jsclient/sk-data'
+import WindGauge from "../../components/windgauge/windgauge"
 
 const Home = (props) => {
 	const [metrics, setMetrics] = useState(props.metrics);
@@ -12,7 +13,7 @@ const Home = (props) => {
 				<Metric metrics={metrics} metric_name={SkData.POLAR_RATIO} large={true} />
 			</div>
 			<div class={style.right}>
-				<Metric metrics={metrics} metric_name={SkData.SOG} large={false} />
+				<WindGauge metrics={metrics} theme={props.theme} />
 			</div>
 			<div class={style.right}>
 				<Metric metrics={metrics} metric_name={SkData.POLAR_TARGET} large={false} />

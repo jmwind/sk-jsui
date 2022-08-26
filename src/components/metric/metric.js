@@ -1,6 +1,6 @@
-import { useEffect, useState, useRef } from "preact/hooks";
-import style from './style.css';
-import { SkConversions } from 'sk-jsclient/sk-data';
+import { useEffect, useState, useRef } from "preact/hooks"
+import style from './style.css'
+import { SkConversions } from 'sk-jsclient/sk-data'
 
 const Metric = (props) => {
     const [time, setTime] = useState(Date.now());
