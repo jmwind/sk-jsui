@@ -8,7 +8,7 @@ const Metric = (props) => {
 
     // update metrics every 1s
     useEffect(() => {
-        let timer = setInterval(() => setTime(Date.now()), 1000);
+        let timer = setInterval(() => setTime(Date.now()), Math.random() * 1000);
         return () => clearInterval(timer);
     }, []);
 

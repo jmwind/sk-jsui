@@ -77,7 +77,7 @@ const PolarGauge = (props) => {
     }
 
     useEffect(() => {
-        let timer = setInterval(() => setTime(Date.now()), 1000);
+        let timer = setInterval(() => setTime(Date.now()), 750);
         return () => clearInterval(timer);
     }, []);
 

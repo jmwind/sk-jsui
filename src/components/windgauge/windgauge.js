@@ -107,7 +107,7 @@ const WindGauge = (props) => {
     }
 
     useEffect(() => {
-        let timer = setInterval(() => setTime(Date.now()), 1000);
+        let timer = setInterval(() => setTime(Date.now()), 250);
         return () => clearInterval(timer);
     }, []);
 
